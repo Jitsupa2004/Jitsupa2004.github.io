@@ -29,4 +29,313 @@
         rgba(255,255,186,0.15) 80px,
         rgba(255,255,186,0.15) 120px,
         rgba(186,255,201,0.15) 120px,
-        rgba(186,255,201,0.15) 160px,...
+        rgba(186,255,201,0.15) 160px,
+        rgba(186,225,255,0.15) 160px,
+        rgba(186,225,255,0.15) 200px,
+        rgba(216,191,255,0.15) 200px,
+        rgba(216,191,255,0.15) 240px
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap { position: relative; z-index: 1; }
+
+    /* Header rainbow bar */
+    .rainbow-bar {
+      height: 6px;
+      background: linear-gradient(90deg,
+        #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff, #d4baff
+      );
+    }
+
+    header {
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 0.9rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Mitr', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      background: linear-gradient(90deg, #ff9aa2, #ffb347, #ffd700, #87ceeb, #9b8fe8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header nav a {
+      font-size: 0.88rem;
+      color: #888;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      padding: 4px 14px;
+      border-radius: 20px;
+      border: 1px solid #eee;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    /* Hero */
+    .hero {
+      background: white;
+      border-radius: 28px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      border: 1px solid #f0f0f0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* rainbow top border */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg,
+        #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff, #d4baff
+      );
+    }
+
+    .hero img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid transparent;
+      background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, #ffb3ba, #bae1ff, #d4baff) border-box;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Mitr', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 500;
+      background: linear-gradient(90deg, #ff9aa2, #9b8fe8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero .role {
+      font-size: 0.88rem;
+      color: #aaa;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .hero .bio {
+      display: inline-block;
+      font-size: 0.92rem;
+      color: #666;
+      line-height: 1.9;
+      background: #fafafa;
+      border-radius: 16px;
+      padding: 0.8rem 1.4rem;
+      border: 1px dashed #e8e8e8;
+      text-align: left;
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      border-radius: 20px;
+      border: 1px solid #f0f0f0;
+      padding: 1.6rem 1.8rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* rainbow left accent แต่ละ card ต่างสี */
+    .card:nth-child(1)::before { background: linear-gradient(180deg, #ffb3ba, #ffdfba); }
+    .card:nth-child(2)::before { background: linear-gradient(180deg, #ffffba, #baffc9); }
+    .card:nth-child(3)::before { background: linear-gradient(180deg, #bae1ff, #d4baff); }
+    .card:nth-child(4)::before { background: linear-gradient(180deg, #ffb3ba, #d4baff); }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 5px;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .section-title {
+      font-family: 'Mitr', sans-serif;
+      font-size: 0.98rem;
+      color: #555;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1.5px dashed #f0f0f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot-pink { background: #ffb3ba; }
+    .dot-yellow { background: #ffd700; }
+    .dot-blue { background: #bae1ff; }
+    .dot-purple { background: #d4baff; }
+
+    p, li {
+      line-height: 1.9;
+      color: #666;
+      font-size: 0.93rem;
+    }
+
+    ul { padding-left: 1.3rem; }
+    ul li { margin-bottom: 0.4rem; }
+    ul li::marker { color: #ffb3ba; }
+
+    .hobby-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 0.5rem;
+    }
+
+    .hobby-item {
+      background: #fafafa;
+      border: 1px solid #f0f0f0;
+      border-radius: 14px;
+      padding: 12px 8px;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #666;
+    }
+
+    .hobby-item .emoji { font-size: 1.5rem; display: block; margin-bottom: 4px; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .tag {
+      border-radius: 20px;
+      padding: 5px 16px;
+      font-size: 0.84rem;
+      border: 1px solid transparent;
+    }
+
+    .tag-pink { background: #fff0f2; color: #e87a87; border-color: #ffb3ba; }
+    .tag-yellow { background: #fffbea; color: #c9940a; border-color: #ffd700; }
+    .tag-blue { background: #f0f8ff; color: #5a9fd4; border-color: #bae1ff; }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      background: #fafafa;
+      border: 1px solid #f0f0f0;
+      font-size: 0.93rem;
+      color: #666;
+    }
+
+    .contact-row a { color: #9b8fe8; text-decoration: none; }
+    .contact-row a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.83rem;
+      color: #bbb;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-rainbow {
+      height: 4px;
+      background: linear-gradient(90deg,
+        #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff, #d4baff
+      );
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="rainbow-bar"></div>
+
+  <header>
+    <div class="logo">🌈 {{ site.title }}</div>
+    <nav><a href="#">หน้าหลัก</a></nav>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <img src="images/profile.png" alt="โปรไฟล์">
+      <h1>นางสาวจิตรสุภา ไกรตรวจพล</h1>
+      <div class="role">✨ เทคโนโลยีสารสนเทศ · ปริญญาตรี ✨</div>
+      <div class="bio">
+  กำลังศึกษาระดับปริญญาตรี สาขาเทคโนโลยีสารสนเทศ<br>
+  สถาบันอาชีวะกลาง 5 วิทยาลัยเทคนิคสมุทรสาคร<br>
+  💼 บริษัทโทรคมนาคมแห่งชาติ จำกัด · Dispatcher (1177) & ช่างเทคนิค
+</div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">
+        <span class="dot dot-pink"></span> ความสนใจ
+      </div>
+      <div class="tags">
+        <span class="tag tag-pink">☕ ธุรกิจคาเฟ่</span>
+        <span class="tag tag-blue">💻 Web Development</span>
+        <span class="tag tag-yellow">📊 Data Science</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">
+        <span class="dot dot-yellow"></span> งานอดิเรก
+      </div>
+      <div class="hobby-grid">
+        <div class="hobby-item"><span class="emoji">🎵</span>ฟังเพลง</div>
+        <div class="hobby-item"><span class="emoji">🎬</span>ดูหนัง</div>
+        <div class="hobby-item"><span class="emoji">✈️</span>ท่องเที่ยว</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">
+        <span class="dot dot-blue"></span> ติดต่อ
+      </div>
+      <div class="contact-row">
+        🐙 <a href="https://github.com/Jitsupa2004">github.com/Jitsupa2004</a>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="footer-rainbow"></div>
+  <footer>🌈 made with ♡ · จิตรสุภา ไกรตรวจพล</footer>
+
+</div>
+</body>
+</html>
