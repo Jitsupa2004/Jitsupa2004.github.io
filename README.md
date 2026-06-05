@@ -1,7 +1,9 @@
-# 🚀 IT Keywords Project
+# 🚀 My Portfolio
 
-## 📚 My Topics
+## 📚 IT Keywords Project
 
-- 🌐 [Database](https://jitsupa2004.github.io/database)
-- 🔗 [Network](https://jitsupa2004.github.io/network)
+👉 เลือกหัวข้อที่ต้องการ
+
+- 📊 [Database](https://jitsupa2004.github.io/database)
+- 🌐 [Network](https://jitsupa2004.github.io/network)
 - 💻 [Programming](https://jitsupa2004.github.io/programming)
