@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
+  <title>จิตรสุภา ไกรตรวจพล</title>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500&family=Mitr:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -15,7 +15,6 @@
       color: #3a3a3a;
     }
 
-    /* พื้นหลัง pastel rainbow ลายทาง */
     body::before {
       content: '';
       position: fixed;
@@ -41,7 +40,6 @@
 
     .wrap { position: relative; z-index: 1; }
 
-    /* Header rainbow bar */
     .rainbow-bar {
       height: 6px;
       background: linear-gradient(90deg,
@@ -88,7 +86,6 @@
       padding: 0 1.5rem 4rem;
     }
 
-    /* Hero */
     .hero {
       background: white;
       border-radius: 28px;
@@ -101,7 +98,6 @@
       overflow: hidden;
     }
 
-    /* rainbow top border */
     .hero::before {
       content: '';
       position: absolute;
@@ -154,7 +150,6 @@
       text-align: left;
     }
 
-    /* Cards */
     .card {
       background: white;
       border-radius: 20px;
@@ -166,11 +161,11 @@
       overflow: hidden;
     }
 
-    /* rainbow left accent แต่ละ card ต่างสี */
     .card:nth-child(1)::before { background: linear-gradient(180deg, #ffb3ba, #ffdfba); }
     .card:nth-child(2)::before { background: linear-gradient(180deg, #ffffba, #baffc9); }
     .card:nth-child(3)::before { background: linear-gradient(180deg, #bae1ff, #d4baff); }
     .card:nth-child(4)::before { background: linear-gradient(180deg, #ffb3ba, #d4baff); }
+    .card:nth-child(5)::before { background: linear-gradient(180deg, #baffc9, #bae1ff); }
 
     .card::before {
       content: '';
@@ -198,10 +193,11 @@
       flex-shrink: 0;
     }
 
-    .dot-pink { background: #ffb3ba; }
+    .dot-pink   { background: #ffb3ba; }
     .dot-yellow { background: #ffd700; }
-    .dot-blue { background: #bae1ff; }
+    .dot-blue   { background: #bae1ff; }
     .dot-purple { background: #d4baff; }
+    .dot-green  { background: #baffc9; }
 
     p, li {
       line-height: 1.9;
@@ -241,9 +237,9 @@
       border: 1px solid transparent;
     }
 
-    .tag-pink { background: #fff0f2; color: #e87a87; border-color: #ffb3ba; }
+    .tag-pink   { background: #fff0f2; color: #e87a87; border-color: #ffb3ba; }
     .tag-yellow { background: #fffbea; color: #c9940a; border-color: #ffd700; }
-    .tag-blue { background: #f0f8ff; color: #5a9fd4; border-color: #bae1ff; }
+    .tag-blue   { background: #f0f8ff; color: #5a9fd4; border-color: #bae1ff; }
 
     .contact-row {
       display: flex;
@@ -260,6 +256,45 @@
 
     .contact-row a { color: #9b8fe8; text-decoration: none; }
     .contact-row a:hover { text-decoration: underline; }
+
+    /* keyword grid */
+    .keyword-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 0.5rem;
+    }
+
+    .keyword-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 14px 10px;
+      border-radius: 16px;
+      background: #fafafa;
+      border: 1px solid #f0f0f0;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .keyword-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .keyword-card .k-emoji { font-size: 1.6rem; }
+
+    .keyword-card .k-label {
+      font-family: 'Mitr', sans-serif;
+      font-size: 0.85rem;
+      color: #555;
+      text-align: center;
+    }
+
+    .keyword-card.kw-pink   { border-color: #ffb3ba; }
+    .keyword-card.kw-blue   { border-color: #bae1ff; }
+    .keyword-card.kw-green  { border-color: #baffc9; }
 
     footer {
       text-align: center;
@@ -283,7 +318,7 @@
   <div class="rainbow-bar"></div>
 
   <header>
-    <div class="logo">🌈 {{ site.title }}</div>
+    <div class="logo">🌈 จิตรสุภา ไกรตรวจพล</div>
     <nav><a href="#">หน้าหลัก</a></nav>
   </header>
 
@@ -294,10 +329,10 @@
       <h1>นางสาวจิตรสุภา ไกรตรวจพล</h1>
       <div class="role">✨ เทคโนโลยีสารสนเทศ · ปริญญาตรี ✨</div>
       <div class="bio">
-  กำลังศึกษาระดับปริญญาตรี สาขาเทคโนโลยีสารสนเทศ<br>
-  สถาบันอาชีวะกลาง 5 วิทยาลัยเทคนิคสมุทรสาคร<br>
-  💼 บริษัทโทรคมนาคมแห่งชาติ จำกัด · Dispatcher (1177) & ช่างเทคนิค
-</div>
+        กำลังศึกษาระดับปริญญาตรี สาขาเทคโนโลยีสารสนเทศ<br>
+        สถาบันอาชีวะกลาง 5 วิทยาลัยเทคนิคสมุทรสาคร<br>
+        💼 บริษัทโทรคมนาคมแห่งชาติ จำกัด · Dispatcher (1177) &amp; ช่างเทคนิค
+      </div>
     </div>
 
     <div class="card">
@@ -324,13 +359,33 @@
 
     <div class="card">
       <div class="section-title">
+        <span class="dot dot-green"></span> IT Keywords
+      </div>
+      <div class="keyword-grid">
+        <a href="https://jitsupa2004.github.io/programming" class="keyword-card kw-pink">
+          <span class="k-emoji">💻</span>
+          <span class="k-label">Programming</span>
+        </a>
+        <a href="https://jitsupa2004.github.io/networking" class="keyword-card kw-blue">
+          <span class="k-emoji">🌐</span>
+          <span class="k-label">Networking</span>
+        </a>
+        <a href="https://jitsupa2004.github.io/data" class="keyword-card kw-green">
+          <span class="k-emoji">📊</span>
+          <span class="k-label">Data</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">
         <span class="dot dot-blue"></span> ติดต่อ
       </div>
       <div class="contact-row">
         🐙 <a href="https://github.com/Jitsupa2004">github.com/Jitsupa2004</a>
       </div>
-     
     </div>
+
     <div class="card">
       <div class="section-title">
         <span class="dot dot-blue"></span> ภาพโครงการ
@@ -338,6 +393,8 @@
       <div class="contact-row">
         🐙 <a href="https://jitsupa2004.github.io/Project">ภาพโครงการก่อสร้างขององค์การบริหารส่วนตำบลกาหลง</a>
       </div>
+    </div>
+
   </main>
 
   <div class="footer-rainbow"></div>
